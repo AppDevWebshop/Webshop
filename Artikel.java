@@ -4,15 +4,15 @@ public class Artikel {
 
     //Attribute
 
-    private String artikelbezeichnung;
-    public int artikelnummer;
+    private String artikelBezeichnung;
+    public int artikelNummer;
     private double preis;
 
     //Konstruktor
 
-    public Artikel(String artikelbezeichnung, int artikelnummer, double preis) {
-        this.artikelbezeichnung = artikelbezeichnung;
-        this.artikelnummer = artikelnummer;
+    public Artikel(String artikelBezeichnung, int artikelNummer, double preis) {
+        this.artikelBezeichnung = artikelBezeichnung;
+        this.artikelNummer = artikelNummer;
         this.preis = preis;
     }
 
@@ -25,12 +25,12 @@ public class Artikel {
 
 
     //getter
-    public String getArtikelbezeichnung(){
-        return artikelbezeichnung;
+    public String getArtikelBezeichnung(){
+        return artikelBezeichnung;
     }
 
-    public int getArtikelnummer() {
-        return artikelnummer;
+    public int getArtikelNummer() {
+        return artikelNummer;
     }
 
     public double getPreis() {
