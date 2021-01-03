@@ -1,11 +1,13 @@
 package com.company.Webshop;
 
-public class Bestellung extends Bestellpositionsprüfung{
+public class Bestellung extends Bestellpositionspruefung{
 
     //Attribute
 
     private double preisDerBestellung;
     private double versandKosten;
+    
+    public int getArtikelnummer;
 
     //Konstruktor
 
@@ -36,6 +38,8 @@ public class Bestellung extends Bestellpositionsprüfung{
 
 
     //getter
+    
+    
     public double getVersandKosten() {
         return versandKosten;
     }
