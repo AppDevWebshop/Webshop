@@ -27,26 +27,7 @@ public class Warenkorb {
         }
     }
 
-    //Arrayinhalt anpassen
-    public void setInhaltWarenkorb(int artikelnummer, int menge) {
-        for (int i = 0; i < inhaltWarenkorb.length; i++) {
-
-            for (int j = 0; j < inhaltWarenkorb[i].length; j++) {
-                if (inhaltWarenkorb[i] == null) {
-                    inhaltWarenkorb[i][j] = artikelnummer;
-                    inhaltWarenkorb[i][j + 1] = menge;
-                    break;
-                }
-                else {
-                    System.out.println("test");
-                    break;
-                }
-
-            }
-            //printArray();
-            break;
-        }
-    }
+    
     //setter
     public void setArtikelmenge(int artikelmenge) {
         this.artikelmenge = artikelmenge;
