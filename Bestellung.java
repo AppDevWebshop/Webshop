@@ -36,7 +36,7 @@ public class Bestellung extends Bestellpositionsprüfung{
 
 
     //getter
-    public double getVersanddKosten() {
+    public double getVersandKosten() {
         return versandKosten;
     }
     
