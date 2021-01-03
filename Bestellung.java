@@ -44,9 +44,9 @@ public class Bestellung extends Bestellpositionspruefung{
     //    return versandKosten;
     //}
     
-     public int getArtikelnummer() {
-        return artikelnummer;
-    }
+     //public int getArtikelnummer() {
+     //   return artikelnummer;
+     //}
     
      public int getArtikelmenge() {
         return artikelmenge;
