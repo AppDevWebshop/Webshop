@@ -5,7 +5,7 @@ public class Artikel {
     //Attribute
 
     private String artikelbezeichnung;
-    private int artikelnummer;
+    public int artikelnummer;
     private double preis;
 
     //Konstruktor
