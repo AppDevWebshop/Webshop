@@ -40,9 +40,9 @@ public class Bestellung extends Bestellpositionspruefung{
     //getter
     
     
-    public double getVersandKosten() {
-        return versandKosten;
-    }
+    //public double getVersandKosten() {
+    //    return versandKosten;
+    //}
     
      public int getArtikelnummer() {
         return artikelnummer;
