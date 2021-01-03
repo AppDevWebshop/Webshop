@@ -1,13 +1,11 @@
 package com.company.Webshop;
 
-public class Bestellung {
+public class Bestellung extends Bestellpositionsprüfung{
 
     //Attribute
 
     private double preisDerBestellung;
     private double versandKosten;
-    public int artikelnummer;
-    public int artikelmenge;
 
     //Konstruktor
 
