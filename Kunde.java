@@ -30,6 +30,13 @@ public class Kunde
 
     public void BestellungAendern()
     {
+        for (int i = 0; i < inhaltWarenkorb.length; i++) 												//Prüfung ob ein Feld (Artikelnummer, Artikelmenge) leer ist
+			{							
+			for (int j = 0; j < inhaltWarenkorb.length; j++) 
+				if(inhaltWarenkorb[i][j] == 0) {														
+					inhaltWarenkorb[i][j] = artikelnummer;
+                    inhaltWarenkorb[i][j + 1] = menge;	
+				}
     }
 
 
