@@ -4,8 +4,8 @@ public class Warenkorb {
 
     //Attribute
 
-    private  int artikelmenge;
-    private int[][] inhaltWarenkorb;
+    public  int artikelmenge;
+    public int[][] inhaltWarenkorb;
 
 
     //Konstruktor
