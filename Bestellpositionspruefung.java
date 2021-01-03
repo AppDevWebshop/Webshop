@@ -2,8 +2,6 @@ package com.company.Webshop;
 
 public class Bestellpositionspruefung extends Warenkorb{
 	
-	public static void main(String[] args) {
-	}
 		public void leererwarenkorb(String[] args){
 		
 		//Abbruch Prüfung für leeren Warenkorb 	
@@ -23,7 +21,7 @@ public class Bestellpositionspruefung extends Warenkorb{
 		
 		if(inhaltWarenkorb.length > 100)																//Länge des Arrays wird geprüft
 			System.out.println("Es wurden zu viele Artikel bestellt. Passen Sie den Warenkorb an!");
-	}
+		}
 	
 }
  
