@@ -25,7 +25,7 @@ public class Kunde
 
     public void BestellungErstellen()
     {
-	    	            com.company.Webshop.Warenkorb warenkorb1 = new com.company.Webshop.Warenkorb();
+	    	            com.company.Webshop.Warenkorb warenkorb+kundennummer = new com.company.Webshop.Warenkorb();
     }
 
 
