@@ -35,7 +35,7 @@ public class Kunde
 			for (int j = 0; j < inhaltWarenkorb.length; j++) 
 				if(inhaltWarenkorb[i][j] == 0) {														
 					inhaltWarenkorb[i][j] = artikelnummer;
-                    inhaltWarenkorb[i][j + 1] = menge;	
+                   			inhaltWarenkorb[i][j + 1] = menge;	
 				}
     }
 
