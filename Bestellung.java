@@ -1,5 +1,9 @@
 package com.company.Webshop;
 
+
+
+TESTTEST
+
 public class Bestellung {
 
     //Attribute
@@ -31,14 +35,14 @@ public class Bestellung {
         else System.out.println("Fehler");
     }
 
-    public void sendeBestellbest‰tigung(){
-        System.out.println("Ihre Bestellung war erfolgreich. Ihre Rechnungssumme betr‰gt " + (versandKosten+preisDerBestellung) + "Ä.");
+    public void sendeBestellbest√§tigung(){
+        System.out.println("Ihre Bestellung war erfolgreich. Ihre Rechnungssumme betr√§gt " + (versandKosten+preisDerBestellung) + "‚Ç¨.");
 
     }
 
 
     //getter
-    public double getVersandKosten() {
+    public double getVersanddKosten() {
         return versandKosten;
     }
     //
