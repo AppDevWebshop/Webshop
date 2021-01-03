@@ -1,9 +1,5 @@
 package com.company.Webshop;
 
-
-
-TESTTEST
-
 public class Bestellung {
 
     //Attribute
