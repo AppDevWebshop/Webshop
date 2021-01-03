@@ -25,6 +25,7 @@ public class Kunde
 
     public void BestellungErstellen()
     {
+	    	            com.company.Webshop.Warenkorb warenkorb1 = new com.company.Webshop.Warenkorb();
     }
 
 
@@ -42,7 +43,7 @@ public class Kunde
 
     public void BestellungAusloesen()
     {
-	            com.company.Webshop.Warenkorb warenkorb1 = new com.company.Webshop.Warenkorb();
+	           
     }
 
 
