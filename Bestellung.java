@@ -6,8 +6,8 @@ public class Bestellung {
 
     private double preisDerBestellung;
     private double versandKosten;
-
-
+    public int artikelnummer;
+    private int artikelmenge;
 
     //Konstruktor
 
