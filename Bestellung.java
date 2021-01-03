@@ -6,8 +6,6 @@ public class Bestellung extends Bestellpositionspruefung{
 
     private double preisDerBestellung;
     private double versandKosten;
-    
-    public int getArtikelnummer;
 
     //Konstruktor
 
@@ -36,7 +34,7 @@ public class Bestellung extends Bestellpositionspruefung{
 
     }
 
-
+    public int Artikel.getArtikelnummer;
     //getter
     
     
