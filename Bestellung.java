@@ -41,6 +41,14 @@ public class Bestellung {
     public double getVersanddKosten() {
         return versandKosten;
     }
+    
+     public int getArtikelnummer() {
+        return artikelnummer;
+    }
+    
+     public int getArtikelmenge() {
+        return artikelmenge;
+    }
     //
 
     //setter
