@@ -46,13 +46,6 @@ public class Kunde
 	           
     }
 
-
-    public void KundendatenAendern()
-    {
-    }
-
-
-
     //getter
     public int getKundenNummer()
     {
