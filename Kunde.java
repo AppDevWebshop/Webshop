@@ -67,6 +67,7 @@ public class Kunde
         }
     }
 
+    
     //getter
     public int getKundenNummer()
     {
