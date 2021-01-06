@@ -46,39 +46,24 @@ public class Kunde
                 }
         }
     }
+    
+    
 
-
-        public void BestellungAusloesen()
+public void BestellungAusloesen()
     {
         if(new Bestellpositionspruefung().leererwarenkorb() == true)
         {
-
+            new Bestellung().berechnungVersandkosten();
+            new Bestellung().sendeBestellbestätigung();
         }
+        
         else
         {
             System.out.println("Es ist ein Fehler aufgetreten.");
         }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    //public void BestellungAusloesen() {
-    //    if (new Bestellpositionspruefung().leererwarenkorb() == true) {
-    //        new Bestellung().berechnungVersandkosten();
-    //        new Bestellung().sendeBestellbestätigung();
-    //    }
-    //    else {
-    //        System.out.println("Fehler im Warenkorb");
-    //    }
-    //}
-
-
-
+    }
+ 
+      
 
     //getter
     public int getKundenNummer()
