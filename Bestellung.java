@@ -33,6 +33,14 @@ public class Bestellung extends Bestellpositionspruefung{
         System.out.println("Ihre Bestellung war erfolgreich. Ihre Rechnungssumme beträgt " + (versandKosten+preisDerBestellung) + "€.");
 
     }
+    
+    public void berechnungPreis(){
+        for(int i=0;i<=warenkorb.length; i++)
+	{
+		for(int j=0; j<inhaltWarenkorb[i].length; j++)
+	        (preisDerBestellung = preisDerBestellung + inhaltWarenkorb[i]*inhalt.Warenkorb[j])
+
+    }
 
     public int Artikel.getArtikelnummer;
     //getter
