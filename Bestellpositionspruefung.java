@@ -1,12 +1,10 @@
 package com.company.Webshop;
 
 public class Bestellpositionspruefung extends Warenkorb{
-	
-		public void leererwarenkorb(String[] args){
 		
 		//Abbruch Prüfung für leeren Warenkorb 	
 			
-		public boolean leererwarenkorbb(){   // prueft ob die Menge leer ist
+		public boolean leererwarenkorb(){   // prueft ob die Menge leer ist
 
 			   for(int i = 0; i< inhaltWarenkorb.length;i++)
 			   	{
@@ -20,7 +18,7 @@ public class Bestellpositionspruefung extends Warenkorb{
 			   	return true;												
 		}
 		
-		public void pruefungverschiedeneartikel(String[] args) {
+		public void pruefungverschiedeneartikel() {
 		
 		//Es dürfen nur 100 Artikel im Warenkorb sein, Artikelmenge ist dabei egal
 		
