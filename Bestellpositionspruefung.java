@@ -6,13 +6,18 @@ public class Bestellpositionspruefung extends Warenkorb{
 		
 		//Abbruch Prüfung für leeren Warenkorb 	
 			
-		for (int i = 0; i < inhaltWarenkorb.length; i++) 												//Prüfung ob ein Feld (Artikelnummer, Artikelmenge) leer ist
-			{							
-			for (int j = 0; j < inhaltWarenkorb.length; j++) 
-				if(inhaltWarenkorb[i][j] == 0) {														
-					System.out.println("Der Warenkorb enthält eine leere Felder. Prüfen Sie den Warenkorb!");	
-				}
-			}
+		public boolean leererwarenkorbb(){   // prueft ob die Menge leer ist
+
+			   for(int i = 0; i< inhaltWarenkorb.length;i++)
+			   	{
+				   for (int j = 0; j < inhaltWarenkorb.length;j++) 
+				   	{
+					   if(inhaltWarenkorb[i][j] != 0){
+						   return false;
+					 }
+				   }
+			 	}
+			   	return true;												
 		}
 		
 		public void pruefungverschiedeneartikel(String[] args) {
