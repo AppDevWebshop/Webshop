@@ -4,9 +4,8 @@ import com.company.Webshop.Artikel;
 import com.company.Webshop.Bestellpositionspruefung;
 import com.company.Webshop.Bestellung;
 import com.company.Webshop.Warenkorb;
-import com.company.Webshop.Test;
 
-public class Kunde extends Bestellpositionspruefung
+public class Kunde
 {
     //Attrribute
 
@@ -31,7 +30,7 @@ public class Kunde extends Bestellpositionspruefung
 
     public void BestellungErstellen()
     {
-        com.company.Webshop.Warenkorb warenkorb;
+        com.company.Webshop.Warenkorb warenkorb = new com.company.Webshop.Warenkorb();
     }
 
 
@@ -51,7 +50,9 @@ public class Kunde extends Bestellpositionspruefung
 
     public void BestellungAusloesen()
     {
-        pruefungverschiedeneartikel();
+        new Bestellpositionspruefung().pruefungverschiedeneartikel();
+        new Bestellung().berechnungVersandkosten();
+        new Bestellung().sendeBestellbestätigung();
     }
 
 
