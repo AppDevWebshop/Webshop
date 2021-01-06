@@ -15,6 +15,7 @@ public class Kunde
     private String versandAdresse;
     private String rechnungsAdresse;
 
+
     //Konstruktor
 
     public Kunde (int kundenNummer, String kundenName, String kundenNachname, String versandAdresse, String rechnungsAdresse)
@@ -26,6 +27,8 @@ public class Kunde
         this.rechnungsAdresse = rechnungsAdresse;
 
     }
+
+
     //Methoden
 
     public void BestellungErstellen()
@@ -33,7 +36,7 @@ public class Kunde
         com.company.Webshop.Warenkorb warenkorb = new com.company.Webshop.Warenkorb();
     }
 
-
+    /*
     public void BestellungAendern()
     {
         for (int i = 0; i < inhaltWarenkorb.length; i++)                              //Prüfung ob ein Feld (Artikelnummer, Artikelmenge) leer ist
@@ -46,24 +49,23 @@ public class Kunde
                 }
         }
     }
-    
-    
+    */
 
-public void BestellungAusloesen()
+
+    public void BestellungAusloesen()
     {
+        Bestellpositionspruefung bestellpositionspruefung = new Bestellpositionspruefung();
         if(new Bestellpositionspruefung().leererwarenkorb() == true)
         {
             new Bestellung().berechnungVersandkosten();
             new Bestellung().sendeBestellbestätigung();
         }
-        
+
         else
         {
             System.out.println("Es ist ein Fehler aufgetreten.");
         }
     }
- 
-      
 
     //getter
     public int getKundenNummer()
