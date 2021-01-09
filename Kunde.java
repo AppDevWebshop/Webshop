@@ -1,10 +1,5 @@
 package com.company.Webshop;
 
-import com.company.Webshop.Artikel;
-import com.company.Webshop.Bestellpositionspruefung;
-import com.company.Webshop.Bestellung;
-import com.company.Webshop.Warenkorb;
-
 public class Kunde
 {
     //Attrribute
@@ -14,6 +9,9 @@ public class Kunde
     private String kundenNachname;
     private String versandAdresse;
     private String rechnungsAdresse;
+    Warenkorb warenkorb = new Warenkorb();
+
+
 
 
     //Konstruktor
@@ -25,95 +23,63 @@ public class Kunde
         this.kundenNachname = kundenNachname;
         this.versandAdresse = versandAdresse;
         this.rechnungsAdresse = rechnungsAdresse;
-
     }
 
 
     //Methoden
 
-    public void BestellungErstellen()
+
+
+   //Artikel zum Warenkorb hinzufügen
+   public void artikelHinzufuegen(int artikelNummer, int artikelMenge)
+   {
+       warenkorb.setInhaltWarenkorb(artikelNummer,artikelMenge);
+   }
+
+
+   //Artikel aus dem Warenkorb entfernen
+   public void artikelEntfernen(int ariktelNummer)
+   {
+       warenkorb.löscheArtikel(ariktelNummer);
+   }
+
+
+    //Ändere Anzahl Artikel im Warenkorb
+    public void artikelAendern(int ariktelNummer, int artikelMenge)
     {
-        com.company.Webshop.Warenkorb warenkorb = new com.company.Webshop.Warenkorb();
+        warenkorb.ändereAnzahl(ariktelNummer,artikelMenge);
     }
 
-    /*
-    public void BestellungAendern()
+
+    //Warenkorb ausgeben
+    public void zeigeWarenkorb()
     {
-        for (int i = 0; i < inhaltWarenkorb.length; i++)                              //Prüfung ob ein Feld (Artikelnummer, Artikelmenge) leer ist
-        {
-            for (int j = 0; j < inhaltWarenkorb.length; j++)
-                if (inhaltWarenkorb[i][j] == 0)
-                {
-                    inhaltWarenkorb[i][j] = artikelNummer;
-                    inhaltWarenkorb[i][j + 1] = artikelmenge;
-                }
-        }
-    }
-    */
-
-
-    public void BestellungAusloesen()
-    {
-        Bestellpositionspruefung bestellpositionspruefung = new Bestellpositionspruefung();
-        if(new Bestellpositionspruefung().leererwarenkorb() == true)
-        {
-            new Bestellung().berechnungVersandkosten();
-            new Bestellung().sendeBestellbestätigung();
-        }
-
-        else
-        {
-            System.out.println("Es ist ein Fehler aufgetreten.");
-        }
+        warenkorb.printArray();
     }
 
-    
-    //getter
-    public int getKundenNummer()
+
+   //Bestellung auslösen
+   public void bestellungAusloesen()
     {
-        return kundenNummer;
+
+        new Bestellung().berechnungVersandkosten();
+        new Bestellung().sendeBestellbestätigung();
     }
 
-    public String getKundenName()
+
+    //Versandadresse ändern
+    public void setVersandAdresse(String versandAdresse)
     {
-        return kundenName;
+        this.versandAdresse = versandAdresse;
     }
 
-    public String getKundenNachname()
-    {
-        return kundenNachname;
-    }
 
+    //Versanadresse weitergeben
     public String getVersandAdresse()
     {
         return versandAdresse;
     }
 
-    public String getRechnungsAdresse()
-    {
-        return rechnungsAdresse;
-    }
-    //
 
-    //setter
 
-    public void setKundenName(String kundenName)
-    {
-        this.kundenName = kundenName;
-    }
-
-    public void setKundenNachname(String kundenNachname)
-    {
-        this.kundenNachname = kundenNachname;
-    }
-
-    public void setRechnungsAdresse(String rechnungsAdresse)
-    {
-        this.rechnungsAdresse = rechnungsAdresse;
-    }
-
-    public void setVersandAdresse(String versandAdresse)
-    {
-        this.versandAdresse = versandAdresse;
-    }
 }
