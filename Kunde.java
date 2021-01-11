@@ -3,19 +3,17 @@ package com.company.Webshop;
 public class Kunde
 {
     //Attrribute
-
     private int kundenNummer;
     private String kundenName;
     private String kundenNachname;
     private String versandAdresse;
     private String rechnungsAdresse;
-    Warenkorb warenkorb = new Warenkorb();
-
+    private Warenkorb warenkorb = new Warenkorb();
+    private int artikelMenge;
 
 
 
     //Konstruktor
-
     public Kunde (int kundenNummer, String kundenName, String kundenNachname, String versandAdresse, String rechnungsAdresse)
     {
         this.kundenNummer = kundenNummer;
@@ -29,25 +27,27 @@ public class Kunde
     //Methoden
 
 
-
    //Artikel zum Warenkorb hinzufügen
-   public void artikelHinzufuegen(int artikelNummer, int artikelMenge)
+   public int artikelHinzufuegen(int artikelNummer, int artikelMenge)
    {
        warenkorb.setInhaltWarenkorb(artikelNummer,artikelMenge);
+       this.artikelMenge = this.artikelMenge + artikelMenge;
+       //System.out.println(this.artikelMenge);
+       return this.artikelMenge;
    }
 
 
    //Artikel aus dem Warenkorb entfernen
    public void artikelEntfernen(int ariktelNummer)
    {
-       warenkorb.löscheArtikel(ariktelNummer);
+       warenkorb.loescheArtikel(ariktelNummer);
    }
 
 
     //Ändere Anzahl Artikel im Warenkorb
     public void artikelAendern(int ariktelNummer, int artikelMenge)
     {
-        warenkorb.ändereAnzahl(ariktelNummer,artikelMenge);
+        warenkorb.aendereAnzahl(ariktelNummer,artikelMenge);
     }
 
 
@@ -61,9 +61,11 @@ public class Kunde
    //Bestellung auslösen
    public void bestellungAusloesen()
     {
-
-        new Bestellung().berechnungVersandkosten();
-        new Bestellung().sendeBestellbestätigung();
+        int preisBestellung = artikelMenge * 10;
+        new Bestellung().sendeBestellbestaetigung(preisBestellung);
+        System.out.println(versandAdresse);
+        System.out.println("Vielen Dank für Ihren Einkauf!");
+        System.out.println();
     }
 
 
@@ -77,6 +79,7 @@ public class Kunde
     //Versanadresse weitergeben
     public String getVersandAdresse()
     {
+        System.out.println(versandAdresse);
         return versandAdresse;
     }
 
