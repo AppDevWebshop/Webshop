@@ -5,7 +5,7 @@ public class Artikel {
     //Attribute
 
     private String artikelBezeichnung;
-    public int artikelNummer;
+    private int artikelNummer;
     private double preis;
 
     //Konstruktor
@@ -16,27 +16,4 @@ public class Artikel {
         this.preis = preis;
     }
 
-
-    //Methoden
-
-
-
-
-
-
-    //getter
-    public String getArtikelBezeichnung(){
-        return artikelBezeichnung;
-    }
-
-    public int getArtikelNummer() {
-        return artikelNummer;
-    }
-
-    public double getPreis() {
-        return preis;
-    }
-    //
-
-    //setter
 }
